@@ -32,31 +32,13 @@
         controller: 'signOutController',
         controllerAs: 'sign'
       })
-      .state('forest', {
-        url: '/forest',
-        templateUrl: 'app/categoryForest/forest.html',
-        controller: 'CateForestController',
-        controllerAs: 'forest'
-      })
-      .state('mars', {
-        url: '/mars',
-        templateUrl: 'app/categoryMars/mars.html',
-        controller: 'CateMarsController',
-        controllerAs: 'mars'
+      .state('categories', {
+        url: '/categories/:cate',
+        templateUrl: 'app/categories/categories.html',
+        controller: 'CategoriesController',
+        controllerAs: 'cate'
       })
 
-      .state('island', {
-        url: '/island',
-        templateUrl: 'app/categoryIsland/island.html',
-        controller: 'CateIslandController',
-        controllerAs: 'island'
-      })
-      .state('zombie', {
-        url: '/zombie',
-        templateUrl: 'app/categoryZombies/zombie.html',
-        controller: 'CateZombieController',
-        controllerAs: 'zombie'
-      })
       ;
 
     $urlRouterProvider.otherwise('/');
